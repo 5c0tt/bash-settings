@@ -69,7 +69,7 @@ md() { mkdir -p "$@" && cd "$@"; pwd; }
 
 # -- Ping test for internet connection
 # -- Will ping google.com IP address
-alias pink='ping `dig google.com A +short | head -n1`'
+alias pink='$(ping dig google.com A +short | head -n1)'
 
 
 # Open a word in the local dictionary
