@@ -25,7 +25,10 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 # Do not want to export CLICOLOR_FORCE, so just do it this once
 # Add in the -f to force sorting to be like the Finder
-function l () { command env CLICOLOR_FORCE=X ls -laf "$@"; }
+#function l () { command env CLICOLOR_FORCE=X ls -laf "$@"; }
+export CLICOLOR=true
+export CLICOLOR_FORCE=true
+function l { ls -la $@ | grep -v .DS_Store; }
 
 
 # -- Local application aliases --
@@ -69,7 +72,7 @@ md() { mkdir -p "$@" && cd "$@"; pwd; }
 
 # -- Ping test for internet connection
 # -- Will ping google.com IP address
-alias pink='$(ping dig google.com A +short | head -n1)'
+alias pink='ping `dig google.com A +short | head -n1`'
 
 
 # Open a word in the local dictionary
