@@ -23,9 +23,6 @@ shopt -s histappend						# history list is appended to the file named by the val
 # -- Color output --
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
-# Do not want to export CLICOLOR_FORCE, so just do it this once
-# Add in the -f to force sorting to be like the Finder
-#function l () { command env CLICOLOR_FORCE=X ls -laf "$@"; }
 export CLICOLOR=true
 export CLICOLOR_FORCE=true
 function l { ls -la $@ | grep -v .DS_Store; }
