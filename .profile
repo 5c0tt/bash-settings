@@ -45,6 +45,8 @@ alias li='cd ~/Library;       echo "moved to $(pwd)"'	# Take the shell to the Li
 alias ap='cd /Applications;   echo "moved to $(pwd)"'	# Take the shell to the Applications dir
 alias vd='cd /Volumes/Videos; echo "moved to $(pwd)"'	# Take the shell to the Videos Volume dir
 
+# -- Move to misc drectories I frequest --
+alias gg='cd /Users/haneda/Documents/Haneda\,\ Scott/git-projects; echo "moved to $(pwd)"'	# gg for go-git to take me to the root level of my git projects
 
 # -- Open direcories around my home directory --
 alias odt='open ~/Desktop'	                            # Open my home Desktop directory
