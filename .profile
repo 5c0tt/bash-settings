@@ -26,6 +26,7 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 export CLICOLOR=true
 export CLICOLOR_FORCE=true
 function l { ls -lA $@ | grep -v .DS_Store; } # Used to be ls -la to show the . and .. but I no longer want to see those
+alias ll="ls -l" # Show directory listing but hide dot files, config files, .DS_Store, etc.
 
 
 # -- Local application aliases --
