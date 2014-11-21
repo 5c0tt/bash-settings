@@ -15,10 +15,11 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 alias debug="set -o nounset; set -o xtrace"
 
 # -- shopt options, see shopt -p for all options --
-shopt -s cdspell						# Automatic spelling correction for `cd`
-shopt -s cmdhist						# Save multi-line cmd's as single line
-shopt -s histappend						# history list is appended to the file named by the value of the HISTFILE
-
+shopt -s cdspell		# Automatic spelling correction for `cd`
+shopt -s cmdhist		# Save multi-line cmd's as single line
+shopt -s histappend		# history list is appended to the file named by the value of the HISTFILE
+shopt -s dotglob		# Taken from http://www.caliban.org/bash/ allows files beginning with a dot ('.') to be returned in the results of path-name expansion.
+shopt -s nocaseglob		# Case insensitive `cd` into directories, but tab completion seems to fail	
 
 # -- Color output --
 export CLICOLOR=1
