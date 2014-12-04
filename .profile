@@ -33,8 +33,6 @@ alias ll="ls -l" # Show directory listing but hide dot files, config files, .DS_
 # -- Local application aliases --
 alias traceroute='traceroute -I -q 1 -w 2'	# Speed up traceroute, and make compliant
 alias locate='locate -i' # Set the -i flag so it is always searching lowercase.
-alias uldb='sudo /usr/libexec/locate.updatedb'
-
 
 # -- Move around my home directory --
 alias dt='cd ~/Desktop;       echo "moved to $(pwd)"'	# Take the shell to the Desktop dir
