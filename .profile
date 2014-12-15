@@ -18,7 +18,8 @@ alias debug="set -o nounset; set -o xtrace"
 shopt -s cdspell		# Automatic spelling correction for `cd`
 shopt -s cmdhist		# Save multi-line cmd's as single line
 shopt -s histappend		# history list is appended to the file named by the value of the HISTFILE
-shopt -s dotglob		# Taken from http://www.caliban.org/bash/ allows files beginning with a dot ('.') to be returned in the results of path-name expansion.
+shopt -s dotglob		# Taken from http://www.caliban.org/bash/ allows files beginning with a dot ('.') to be returned 
+						# in the results of path-name expansion.
 shopt -s nocaseglob		# Case insensitive `cd` into directories, but tab completion seems to fail	
 
 # -- Color output --
@@ -26,13 +27,17 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 export CLICOLOR=true
 export CLICOLOR_FORCE=true
-function l { ls -lA $@ | grep -v .DS_Store; } # Used to be ls -la to show the . and .. but I no longer want to see those
-alias ll="ls -l" # Show directory listing but hide dot files, config files, .DS_Store, etc.
 
+# Used to be ls -la to show the . and .. but I no longer want to see those
+function l { 
+	ls -lA $@ | grep -v .DS_Store; 
+}
+
+alias ll="ls -l" # Show directory listing but hide dot files, config files, .DS_Store, etc.
 
 # -- Local application aliases --
 alias traceroute='traceroute -I -q 1 -w 2'	# Speed up traceroute, and make compliant
-alias locate='locate -i' # Set the -i flag so it is always searching lowercase.
+alias locate='locate -i' 					# Set the -i flag so it is always searching lowercase.
 
 # -- Move around my home directory --
 alias dt='cd ~/Desktop;       echo "moved to $(pwd)"'	# Take the shell to the Desktop dir
@@ -43,7 +48,7 @@ alias ap='cd /Applications;   echo "moved to $(pwd)"'	# Take the shell to the Ap
 alias vd='cd /Volumes/Videos; echo "moved to $(pwd)"'	# Take the shell to the Videos Volume dir
 
 # -- Move to misc drectories I frequest --
-alias gg='cd /Users/haneda/Documents/Haneda/git-projects; echo "moved to $(pwd)"'	# gg for go-git to take me to the root level of my git projects
+alias ggg='cd /Users/haneda/Documents/Haneda/git-projects; echo "moved to $(pwd)"'	# gg for go-git to take me to the root level of my git projects
 
 # -- Open direcories around my home directory --
 alias odt='open ~/Desktop'	                            # Open my home Desktop directory
@@ -53,7 +58,7 @@ alias oli='open ~/Library'                              # Open my home Library d
 alias oap='open /Applications'                          # Open the Applications directory
 alias ovd='open /Volumes/Videos'	                    # Open my home Videos directory
 
-# Nuke the S_Store file
+# Delete the .DS_Store file, just run `ds` and you are good to go.
 alias ds='rm .DS_Store'
 
 # -- Display free disk space
@@ -64,15 +69,13 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-
 # -- Make a new directory, then cd into it
-md() { mkdir -p "$@" && cd "$@"; pwd; }
+md() { 
+	mkdir -p "$@" && cd "$@"; pwd; 
+}
 
-
-# -- Ping test for internet connection
-# -- Will ping google.com IP address
+# -- Ping test for internet connection — Will ping google.com IP address
 alias plink='ping `dig google.com A +short | head -n1`'
-
 
 # Open a word in the local dictionary
 dict() {
@@ -82,14 +85,5 @@ dict() {
 
 # -- End of My Aliases --
 
-
-# -- Change to the directory of the front most Finder window
-#cdf() {
-#	eval cd "`osascript -e 'tell application "Finder" to \
-#	set return to quoted form of POSIX path of (target of window 1 as alias)' 2>/dev/null`"
-#	echo "Shell is now in: `pwd`"
-#}
-
-
 # -- PATH modifications --
-export PATH=/Users/haneda/bin:$PATH
+export PATH=/Users/haneda/bin:/usr/local/bin:$PATH
