@@ -75,7 +75,7 @@ md() {
 }
 
 # -- Ping test for internet connection — Will ping google.com IP address
-alias plink='ping `dig google.com A +short | head -n1`'
+alias plink='ping $(dig google.com A +short | head -n1)'
 
 # Open a word in the local dictionary
 dict() {
