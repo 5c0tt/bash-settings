@@ -1,5 +1,5 @@
-11/09/14 - 06:15:29 P.M.
-Scott Haneda | [@cometbus](https://twitter.com/cometbus)
+11/09/14 - 06:15:29 P.M.  
+Scott Haneda [@scotthaneda](https://twitter.com/scotthaneda)
 
 #### My bash configuration and settings files
 
@@ -13,7 +13,7 @@ Since these are changed somewhat often it may be wise to symblink them to my git
 
 	<soapbox>
 
-I also asked on stack overflow, where you can [read the answer here](http://stackoverflow.com/questions/26519144/what-is-the-best-workflow-for-rapidly-changing-files). … and that is why I dislike Stack and their entire system, people get booted for the sake of ***order***, fuck order… questions need answers — if they are in the wrong category then ***your*** system is broken, as it should put them into the correct category.  I have a feeling this is a problem that is more beauroratic than a bug that can be fixed, but it is still an improvement over the terribly spammy experts exchange that dominated the text Q & A market a few years back.
+I also asked on stack overflow, where you can [read the answer here](http://stackoverflow.com/questions/26519144/what-is-the-best-workflow-for-rapidly-changing-files). … and that is why I dislike Stack and their entire system, people get booted for the sake of ***order***, fuck order… questions need answers — if they are in the wrong category then ***your*** system is broken, as it should put them into the correct category.  I have a feeling this is a problem that is more bureaucratic than a bug that can be fixed, but it is still an improvement over the terribly spammy experts exchange that dominated the text Q & A market a few years back.
 
 	</soapbox>
 
